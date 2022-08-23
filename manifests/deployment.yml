@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: usamakhanpensionerdetail 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: usamakhanpensionerdetail
+  template:
+    metadata:
+      labels:
+        app: usamakhanpensionerdetail 
+    spec:
+      containers:
+        - name: usamakhanpensionerdetail 
+          image: pmregistery.azurecr.io/usamakhanpensionerdetail
+          ports:
+          - containerPort: 80
